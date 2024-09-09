@@ -20,13 +20,13 @@ async def on_connect():
         try:
             # Send message to every friend
             await user.send(message)
-            print(f"Message envoyé à : {user.name}")
+            print(f"message sent to : {user.name}")
             user_messaged += 1 
         except Exception as e:
-            print(f"Erreur lors de l'envoi à {user.name}: {str(e)}")
+            print(f"error {user.name}: {str(e)}")
             pass
     
     # Displaying the total number of users
-    print(f"\n\n\n{user_messaged} utilisateurs ont reçu le message !")
+    print(f"\n\n\n{user_messaged} message sent")
 
 client.run(token, bot=False)
