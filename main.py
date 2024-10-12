@@ -10,15 +10,12 @@ discord.gg/hackteur
 
 client = discord.Client()
 
-# Event
 @client.event
 async def on_connect():
     user_messaged = 0  # User counter
 
-    # friend loop
     for user in client.user.friends:
         try:
-            # Send message to every friend
             await user.send(message)
             print(f"message sent to : {user.name}")
             user_messaged += 1 
@@ -26,7 +23,6 @@ async def on_connect():
             print(f"error {user.name}: {str(e)}")
             pass
     
-    # Displaying the total number of users
     print(f"\n\n\n{user_messaged} message sent")
 
 client.run(token, bot=False)
