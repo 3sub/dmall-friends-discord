@@ -5,7 +5,7 @@ token = ""
 
 # Message à envoyer aux amis
 message = '''
-discord.gg/black-gold
+discord.gg/hackteur
 '''
 
 client = discord.Client()
